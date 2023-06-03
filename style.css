@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+}
+
+.container{
+    background-color: aliceblue;
+    width: 400px;
+    padding: 35px;
+    margin: 200px auto;
+    -webkit-box-shadow: 10px 14px 26px 12px rgba(106,143,235,1);
+-moz-box-shadow: 10px 14px 26px 12px rgba(106,143,235,1);
+box-shadow: 10px 14px 26px 12px rgba(106,143,235,1);
+}
+
+.coin {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 32px auto;
+    transform-style: preserve-3d;
+}
+
+.coin img{
+    width: 100%;
+}
+ .coin__heads, .coin__tails{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+ }
+ .coin__tails{
+    transform: rotateX(180deg);
+ }
+
+ @keyframes spin-tails {
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+ }
+
+ @keyframes spin-heads {
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+ }
