@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(238, 235, 235);
+    
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.coin {
+    height: 200px;
+    width: 150px;
+    position: relative;
+    margin: 32px auto;
+    transform-style: preserve-3d;
+}
+
+.coin img{
+    width: 100%;
+}
+ .coin__heads, .coin__tails{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+ }
+ .coin__tails{
+    transform: rotateX(180deg);
+ }
+
+ @keyframes spin-tails{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
+@keyframes spin-heads{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+}
+
+ .stats{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 250px;
+    font-size: 40px;
+    margin-top: 55px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgba(0,139,253,0.25);
+ }
+
+ .buttons{
+    display: flex;
+    justify-content: space-evenly;
+    height: 80px;
+    gap: 2em;
+    margin-top: 50px;
+ }
+
+ button{
+    
+    width: 250px;
+    padding: 10px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+
+
+
+    
+ }
+
+ #flip_btn{
+    background-color: rgb(69, 69, 230);
+    color: aliceblue;
+ }
+ #flip_btn:disabled{
+    background-color: gray;
+    color: aliceblue;
+ }
+ #flip_btn:hover{
+    color: rgb(69, 69, 230) ;
+    background-color: aliceblue;
+ }
+ #reset_btn{
+    background-color: rgb(192, 51, 51);
+    color: aliceblue;
+ }
+ #reset_btn:disabled{
+    background-color: gray;
+    color: aliceblue;
+ }
+ #reset_btn:hover{
+    color: rgb(192, 51, 51);
+    background-color: aliceblue;
+ }
+
+ footer {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+
+ @media screen and (max-width: 500px){
+    .buttons{  
+        flex-wrap: wrap; 
+     }
+ }
